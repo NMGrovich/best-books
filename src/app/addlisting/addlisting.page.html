@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add A Book</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>The Book Marketplace</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Book Name:</ion-label>
+        <ion-input #name required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Book Description:</ion-label>
+        <ion-input #description required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Price:</ion-label>
+        <ion-input #price required></ion-input>
+      </ion-item>
+      <ion-button color = "light" (click)="submitNewListing(name, description, price)"> Add Book</ion-button>
+      <ion-button color = "danger" [routerLink]="['/tabs']">Cancel</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

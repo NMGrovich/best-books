@@ -1,17 +1,27 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title>Put A Book Up For Sale!</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-card-content><h1>Here are your listed Books:</h1> </ion-card-content>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-card *ngFor="let data of listings; let i = index">
+  <ion-card-header>
+    <ion-card-title>{{data.bookName}}</ion-card-title>
+    <img src='{{data.imglink}}'>
+    <ion-card-subtitle>${{data.bookPrice}}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{data.bookDesc}}</p>
+    <ion-button (click) = 'deleteListing(i)'>
+      Delete Book Listing
+    </ion-button>
+  </ion-card-content>
+</ion-card>
+
+<ion-content>
+  <ion-card>
+    <ion-button type="submit"[routerLink]="['/addlisting']" color = "light" expand="block">Add A Book</ion-button>
+  </ion-card>
 </ion-content>

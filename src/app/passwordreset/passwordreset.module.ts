@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Tab3PageRoutingModule } from './tab3-routing.module';
+import { PasswordresetPageRoutingModule } from './passwordreset-routing.module';
 
-import { Tab3Page } from './tab3.page';
+import { PasswordresetPage } from './passwordreset.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Tab3PageRoutingModule
+    PasswordresetPageRoutingModule
   ],
-  declarations: [Tab3Page]
+  declarations: [PasswordresetPage]
 })
-export class Tab3PageModule {}
+export class PasswordresetPageModule {}
